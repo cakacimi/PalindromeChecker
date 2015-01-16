@@ -3,7 +3,7 @@ public void setup()
   String lines[] = loadStrings("palindromes.txt");
   println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) {
-    if(palindrome(stripNonAlpha(lines[i]))==true){
+    if(palindrome(dope(lines[i]))==true){
       println(lines[i] + " IS a palidrome.");
     }
     else
@@ -25,7 +25,7 @@ public boolean palindrome(String word)
   }
 }
 
-public String stripNonAlpha(String word){
+public String dope(String word){
   String result = "";
   for(int i=0; i<word.length(); i++){
     if(Character.isLetter(word.charAt(i))==true){
